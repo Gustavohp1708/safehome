@@ -21,6 +21,13 @@ export class MoradorComponent {
     this.servico.selecionar().subscribe(retorno => this.moradores = retorno);
   }
 
+  cadastrar():void{
+    this.servico.cadastrar(this.morador).subscribe(retorno => { this.moradores.push(retorno);});
+
+    this.morador = new Morador();
+    alert("Cliente cadastrado com sucesso.")
+  }
+
   ngOnInit(){
     this.selecionar();
   }

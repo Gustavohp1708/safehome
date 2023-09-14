@@ -26,7 +26,7 @@ public class MoradorController {
         return repository.save(morador);
     }
     
-    @GetMapping("/selecionar")
+    @GetMapping("/")
     public Iterable<Morador> selecionar(){
         return repository.findAll();
     }
