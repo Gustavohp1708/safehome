@@ -15,7 +15,7 @@ public class Morador {
     private Long id;
     private String nome;
     private String logradouro;
-    private Long numero;
+    private String numero;
     private String complemento;
     private String bairro;
     private String cep;
@@ -40,10 +40,10 @@ public class Morador {
     public void setLogradouro(String logradouro) {
         this.logradouro = logradouro;
     }
-    public Long getNumero() {
+    public String getNumero() {
         return numero;
     }
-    public void setNumero(Long numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
     public String getComplemento() {
