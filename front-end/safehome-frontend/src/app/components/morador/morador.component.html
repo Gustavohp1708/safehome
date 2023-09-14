@@ -15,20 +15,21 @@
     <input type="button" value="Cancelar" *ngIf="!btnCadastro" class="btn btn-secondary">
 
 
-    <table class="table">
+    <br><input type="button" value="Exibir Moradores" *ngIf="btnCadastro" class="btn btn-dark" (click)="selecionar()">
+    <table class="table" *ngIf="tabela">
         <thead>
             <tr>
-                <th>#</th>
+                <th>ID</th>
                 <th>Nome</th>
                 <th>Selecionar</th>
             </tr>
         </thead>
 
         <tbody>
-            <tr *ngFor="let m of moradores">
-                <td></td>
+            <tr *ngFor="let m of moradores; index as i">
+                <td>{{m.id}}</td>
                 <td>{{m.nome}}</td>
-                <td><button class="btn btn-success">Selecionar</button></td>
+                <td><button class="btn btn-success" (click)="selecionarMorador(i)">Selecionar</button></td>
             </tr>
         </tbody>
     </table>

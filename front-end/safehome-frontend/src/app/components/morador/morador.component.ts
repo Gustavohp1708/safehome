@@ -13,12 +13,16 @@ export class MoradorComponent {
 
   btnCadastro:boolean = true;
 
+  tabela:boolean = false;
+
   moradores:Morador[] = [];
 
   constructor(private servico:MoradorService){ }
 
   selecionar():void{
     this.servico.selecionar().subscribe(retorno => this.moradores = retorno);
+
+    this.tabela = true;
   }
 
   cadastrar():void{
@@ -28,7 +32,14 @@ export class MoradorComponent {
     alert("Cliente cadastrado com sucesso.")
   }
 
+  selecionarMorador(posicao:number):void{
+    this.morador = this.moradores[posicao];
+
+    this.btnCadastro = false;
+    this.tabela = false;
+  }
+
   ngOnInit(){
-    this.selecionar();
+    //this.selecionar();
   }
 }
