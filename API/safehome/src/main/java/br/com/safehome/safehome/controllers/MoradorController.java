@@ -22,7 +22,7 @@ public class MoradorController {
     }
     
     @GetMapping("/")
-    public String teste(){
-        return "Hello World";
+    public Iterable<Morador> selecionar(){
+        return repository.findAll();
     }
 }
