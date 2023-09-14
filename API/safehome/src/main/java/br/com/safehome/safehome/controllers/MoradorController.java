@@ -2,6 +2,7 @@ package br.com.safehome.safehome.controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,6 +12,7 @@ import br.com.safehome.safehome.models.Morador;
 import br.com.safehome.safehome.repositories.Repository;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class MoradorController {
 
     @Autowired
@@ -21,7 +23,7 @@ public class MoradorController {
         return repository.save(morador);
     }
     
-    @GetMapping("/")
+    @GetMapping("/selecionar")
     public Iterable<Morador> selecionar(){
         return repository.findAll();
     }
