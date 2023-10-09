@@ -1,18 +1,26 @@
 <form>
-    <input type="text" placeholder="Nome" class="form-control" name="nome" [(ngModel)]="morador.nome">
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <input type="text" placeholder="Nome" class="form-control" name="nome" [(ngModel)]="morador.nome">
+        <input type="text" placeholder="CPF" class="form-control" name="cpf" [(ngModel)]="morador.cpf">
+        <input type="text" placeholder="Contato" class="form-control" name="contato" [(ngModel)]="morador.contato">
+    </fieldset>
 
-    <input type="text" placeholder="Logradouro" class="form-control" name="logradouro" [(ngModel)]="morador.logradouro">
-    <input type="text" placeholder="Número" class="form-control" name="numero" [(ngModel)]="morador.numero">
-    <input type="text" placeholder="Complemento" class="form-control" name="complemento" [(ngModel)]="morador.complemento">
-    <input type="text" placeholder="Bairro" class="form-control" name="bairro" [(ngModel)]="morador.bairro">
-    <input type="text" placeholder="CEP" class="form-control" name="cep" [(ngModel)]="morador.cep">
-    <input type="text" placeholder="Cidade" class="form-control" name="cidade" [(ngModel)]="morador.cidade">
-    <input type="text" placeholder="UF" class="form-control" name="uf" [(ngModel)]="morador.uf">
+    <fieldset>
+        <legend>Endereço</legend>
+        <input type="text" placeholder="Logradouro" class="form-control" name="logradouro" [(ngModel)]="morador.logradouro">
+        <input type="text" placeholder="Número" class="form-control" name="numero" [(ngModel)]="morador.numero">
+        <input type="text" placeholder="Complemento" class="form-control" name="complemento" [(ngModel)]="morador.complemento">
+        <input type="text" placeholder="Bairro" class="form-control" name="bairro" [(ngModel)]="morador.bairro">
+        <input type="text" placeholder="CEP" class="form-control" name="cep" [(ngModel)]="morador.cep">
+        <input type="text" placeholder="Cidade" class="form-control" name="cidade" [(ngModel)]="morador.cidade">
+        <input type="text" placeholder="UF" class="form-control" name="uf" [(ngModel)]="morador.uf">
 
-    <input type="button" value="Cadastrar" *ngIf="btnCadastro" class="btn btn-primary" (click)="cadastrar()">
-    <input type="button" value="Alterar" *ngIf="!btnCadastro" class="btn btn-warning">
-    <input type="button" value="Remover" *ngIf="!btnCadastro" class="btn btn-danger">
-    <input type="button" value="Cancelar" *ngIf="!btnCadastro" class="btn btn-secondary">
+        <input type="button" value="Cadastrar" *ngIf="btnCadastro" class="btn btn-primary" (click)="cadastrar()">
+        <input type="button" value="Alterar" *ngIf="!btnCadastro" class="btn btn-warning">
+        <input type="button" value="Remover" *ngIf="!btnCadastro" class="btn btn-danger">
+        <input type="button" value="Cancelar" *ngIf="!btnCadastro" class="btn btn-secondary">
+    </fieldset>
 
 
     <br><input type="button" value="Exibir Moradores" *ngIf="btnCadastro" class="btn btn-dark" (click)="selecionar()">

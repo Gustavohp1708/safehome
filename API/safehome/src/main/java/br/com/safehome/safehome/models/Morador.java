@@ -14,6 +14,8 @@ public class Morador {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    private String cpf;
+    private String contato;
     private String logradouro;
     private String numero;
     private String complemento;
@@ -22,6 +24,19 @@ public class Morador {
     private String cidade;
     private String uf;
     
+    
+    public String getCpf() {
+        return cpf;
+    }
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    public String getContato() {
+        return contato;
+    }
+    public void setContato(String contato) {
+        this.contato = contato;
+    }
     public Long getId() {
         return id;
     }
@@ -75,8 +90,8 @@ public class Morador {
     }
     public void setUf(String uf) {
         this.uf = uf;
-    }
-    
+    }  
+
 
      
 }

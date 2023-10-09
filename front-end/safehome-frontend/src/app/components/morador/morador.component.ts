@@ -38,8 +38,4 @@ export class MoradorComponent {
     this.btnCadastro = false;
     this.tabela = false;
   }
-
-  ngOnInit(){
-    //this.selecionar();
-  }
 }
