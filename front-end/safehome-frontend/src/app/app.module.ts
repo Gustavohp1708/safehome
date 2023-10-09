@@ -6,16 +6,25 @@ import { MoradorComponent } from './components/morador/morador.component';
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrincipalComponent } from './components/principal/principal.component';
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MoradorComponent
+    MoradorComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
