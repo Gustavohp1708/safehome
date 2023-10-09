@@ -1,4 +1,7 @@
-<form>
+<input type="button" value="Cadastrar Moradores" class="btn btn-primary btn2" (click)="exibirForm()">
+
+<form *ngIf="btnCadastrarMoradores">      
+
     <fieldset>
         <legend>Dados Pessoais</legend>
         <input type="text" placeholder="Nome" class="form-control" name="nome" [(ngModel)]="morador.nome">

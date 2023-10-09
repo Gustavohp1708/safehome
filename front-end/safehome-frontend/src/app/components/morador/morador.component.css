@@ -1,6 +1,11 @@
 form {
     width: 500px;
-    margin: 30px auto;
+    margin: 30px;
+}
+
+.btn2 {
+    margin: 30px;
+    width: 500px;
 }
 
 input{
@@ -12,4 +17,11 @@ legend{
     padding-left: 20px;
     font-size: 15px;  
     font-weight: bold; 
+}
+
+h4{
+    background-color: #3c10b6;
+    color: aliceblue;
+    border-radius: 5px;
+    padding-left: 15px;
 }

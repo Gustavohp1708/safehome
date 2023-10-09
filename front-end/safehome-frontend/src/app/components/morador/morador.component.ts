@@ -13,6 +13,8 @@ export class MoradorComponent {
 
   btnCadastro:boolean = true;
 
+  btnCadastrarMoradores:boolean = false;
+
   tabela:boolean = false;
 
   moradores:Morador[] = [];
@@ -23,6 +25,10 @@ export class MoradorComponent {
     this.servico.selecionar().subscribe(retorno => this.moradores = retorno);
 
     this.tabela = true;
+  }
+
+  exibirForm():void{
+    this.btnCadastrarMoradores = true;
   }
 
   cadastrar():void{
@@ -38,4 +44,6 @@ export class MoradorComponent {
     this.btnCadastro = false;
     this.tabela = false;
   }
+
+  
 }
