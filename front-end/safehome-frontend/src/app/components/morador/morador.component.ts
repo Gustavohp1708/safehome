@@ -28,7 +28,12 @@ export class MoradorComponent {
   }
 
   exibirForm():void{
-    this.btnCadastrarMoradores = true;
+
+    if (this.btnCadastrarMoradores === true) {
+      this.btnCadastrarMoradores = false;
+    } else {
+      this.btnCadastrarMoradores = true;
+    }
   }
 
   cadastrar():void{

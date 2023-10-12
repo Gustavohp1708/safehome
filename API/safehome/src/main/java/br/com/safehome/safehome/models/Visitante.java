@@ -23,6 +23,8 @@ public class Visitante {
     private String cep;
     private String cidade;
     private String uf;
+    private String anfitriao;
+    private String enderecoanfitriao;
     
     
     public String getCpf() {
@@ -90,6 +92,18 @@ public class Visitante {
     }
     public void setUf(String uf) {
         this.uf = uf;
+    }
+    public String getAnfitriao() {
+        return anfitriao;
+    }
+    public void setAnfitriao(String anfitriao) {
+        this.anfitriao = anfitriao;
+    }
+    public String getEnderecoanfitriao() {
+        return enderecoanfitriao;
+    }
+    public void setEnderecoanfitriao(String enderecoanfitriao) {
+        this.enderecoanfitriao = enderecoanfitriao;
     }  
 
 

@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+}
+
+app-morador,
+app-visitante {
+    width: 50%;
+    box-sizing: border-box;
+}

@@ -11,12 +11,14 @@ import { PrincipalComponent } from './components/principal/principal.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { VisitanteComponent } from './components/visitante/visitante.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoradorComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    VisitanteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,55 @@
+
+<input type="button" value="Cadastrar Visitantes" class="btn btn-primary btn2" (click)="exibirForm()">
+
+    <form *ngIf="btnCadastrarMoradores">      
+
+        <fieldset>
+            <legend>Dados Pessoais do Visitante</legend>
+            <input type="text" placeholder="Nome" class="form-control" name="nome" [(ngModel)]="visitante.nome">
+            <input type="text" placeholder="CPF" class="form-control" name="cpf" [(ngModel)]="visitante.cpf">
+            <input type="text" placeholder="Contato" class="form-control" name="contato" [(ngModel)]="visitante.contato">
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+            <input type="text" placeholder="Logradouro" class="form-control" name="logradouro" [(ngModel)]="visitante.logradouro">
+            <input type="text" placeholder="Número" class="form-control" name="numero" [(ngModel)]="visitante.numero">
+            <input type="text" placeholder="Complemento" class="form-control" name="complemento" [(ngModel)]="visitante.complemento">
+            <input type="text" placeholder="Bairro" class="form-control" name="bairro" [(ngModel)]="visitante.bairro">
+            <input type="text" placeholder="CEP" class="form-control" name="cep" [(ngModel)]="visitante.cep">
+            <input type="text" placeholder="Cidade" class="form-control" name="cidade" [(ngModel)]="visitante.cidade">
+            <input type="text" placeholder="UF" class="form-control" name="uf" [(ngModel)]="visitante.uf">
+
+            <fieldset>
+                <legend>Dados do Anfitrião</legend>
+                <input type="text" placeholder="Quem será o anfitrião?" class="form-control" name="anfitriao" [(ngModel)]="visitante.uf">
+                <input type="text" placeholder="Número e Complemento do anfitrião" class="form-control" name="enderecoanfitriao" [(ngModel)]="visitante.uf">
+            </fieldset>
+
+            <input type="button" value="Cadastrar" *ngIf="btnCadastro" class="btn btn-primary" (click)="cadastrar()">
+            <input type="button" value="Alterar" *ngIf="!btnCadastro" class="btn btn-warning">
+            <input type="button" value="Remover" *ngIf="!btnCadastro" class="btn btn-danger">
+            <input type="button" value="Cancelar" *ngIf="!btnCadastro" class="btn btn-secondary">
+        </fieldset>
+
+
+        <br><input type="button" value="Exibir Moradores" *ngIf="btnCadastro" class="btn btn-dark" (click)="selecionar()">
+        <table class="table" *ngIf="tabela">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Selecionar</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let m of visitantes; index as i">
+                    <td>{{m.id}}</td>
+                    <td>{{m.nome}}</td>
+                    <td><button class="btn btn-success" (click)="selecionarVisitante(i)">Selecionar</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
