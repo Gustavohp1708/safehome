@@ -22,8 +22,8 @@
 
             <fieldset>
                 <legend>Dados do Anfitrião</legend>
-                <input type="text" placeholder="Quem será o anfitrião?" class="form-control" name="anfitriao" [(ngModel)]="visitante.uf">
-                <input type="text" placeholder="Número e Complemento do anfitrião" class="form-control" name="enderecoanfitriao" [(ngModel)]="visitante.uf">
+                <input type="text" placeholder="Quem será o anfitrião?" class="form-control" name="anfitriao" [(ngModel)]="visitante.anfitriao">
+                <input type="text" placeholder="Número e Complemento do anfitrião" class="form-control" name="enderecoanfitriao" [(ngModel)]="visitante.enderecoanfitriao">
             </fieldset>
 
             <input type="button" value="Cadastrar" *ngIf="btnCadastro" class="btn btn-primary" (click)="cadastrar()">
@@ -33,7 +33,7 @@
         </fieldset>
 
 
-        <br><input type="button" value="Exibir Moradores" *ngIf="btnCadastro" class="btn btn-dark" (click)="selecionar()">
+        <br><input type="button" value="Exibir Visitantes" *ngIf="btnCadastro" class="btn btn-dark" (click)="selecionar()">
         <table class="table" *ngIf="tabela">
             <thead>
                 <tr>
