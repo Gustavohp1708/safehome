@@ -24,4 +24,8 @@ export class MoradorService {
     return this.http.put<Morador>("http://localhost:8080/editar", morador);
   }
 
+  remover(id:number):Observable<void>{
+    return this.http.delete<void>(this.url + '/' + id);
+  }
+
 }

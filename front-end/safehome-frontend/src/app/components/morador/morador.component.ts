@@ -59,6 +59,23 @@ export class MoradorComponent {
     })
   }
 
+  remover():void{
+    this.servico.remover(this.morador.id).subscribe(retorno => {
+
+      let posicao = this.moradores.findIndex(obj => {
+        return obj.id == this.morador.id;
+      });
+
+      this.moradores.splice(posicao, 1);
+
+      this.morador = new Morador();
+      this.btnCadastro = true;
+      this.tabela = true;
+
+      alert('Morador removido com sucesso.')
+    })
+  }
+
   selecionarMorador(posicao:number):void{
     this.morador = this.moradores[posicao];
 
