@@ -43,6 +43,22 @@ export class MoradorComponent {
     alert("Cliente cadastrado com sucesso.")
   }
 
+  editar():void{
+    this.servico.editar(this.morador).subscribe(retorno => {
+
+      let posicao = this.moradores.findIndex(obj => {
+        return obj.id == retorno.id;
+      });
+
+      this.moradores[posicao] = retorno;
+
+      this.btnCadastro = true;
+      this.tabela = true;
+
+      alert('Morador alterado com sucesso.')
+    })
+  }
+
   selecionarMorador(posicao:number):void{
     this.morador = this.moradores[posicao];
 

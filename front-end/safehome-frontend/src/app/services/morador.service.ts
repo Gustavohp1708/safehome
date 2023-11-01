@@ -20,4 +20,8 @@ export class MoradorService {
     return this.http.post<Morador>("http://localhost:8080/cadastrar", morador);
   }
 
+  editar(morador:Morador):Observable<Morador>{
+    return this.http.put<Morador>("http://localhost:8080/editar", morador);
+  }
+
 }
