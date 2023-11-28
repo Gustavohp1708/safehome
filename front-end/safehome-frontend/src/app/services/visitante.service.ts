@@ -20,4 +20,11 @@ export class VisitanteService {
     return this.http.post<Visitante>("http://localhost:8080/cadastrarvisitante", visitante);
   }
 
+  editar(visitante:Visitante):Observable<Visitante>{
+    return this.http.put<Visitante>("http://localhost:8080/editarvisitante", visitante);
+  }
+
+  remover(id:number):Observable<void>{
+    return this.http.delete<void>(this.url + '/deletarvisitante' + id);
+  }
 }

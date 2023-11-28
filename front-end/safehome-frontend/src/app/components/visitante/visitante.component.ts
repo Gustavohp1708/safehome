@@ -49,5 +49,37 @@ export class VisitanteComponent {
     this.tabela = false;
   }
 
+  editarVisitante():void{
+    this.servico.editar(this.visitante).subscribe(retorno => {
+      let posicao = this.visitantes.findIndex(obj => {
+        return obj.id == retorno.id;
+      });
+
+      this.visitantes[posicao] = retorno;
+
+      this.btnCadastro = true;
+      this.tabela = true;
+
+      alert('Visitante alterado com sucesso.')
+    })
+  }
+
+  removerVisitante():void{
+    this.servico.remover(this.visitante.id).subscribe(retorno => {
+
+      let posicao = this.visitantes.findIndex(obj => {
+        return obj.id == this.visitante.id;
+      });
+
+      this.visitantes.splice(posicao, 1);
+
+      this.visitante = new Visitante();
+      this.btnCadastro = true;
+      this.tabela = true;
+
+      alert('Visitante removido com sucesso.')
+    })
+  }
+
   
 }
